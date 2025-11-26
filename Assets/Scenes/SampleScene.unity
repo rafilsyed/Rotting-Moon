@@ -419,6 +419,59 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &738079404
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738079406}
+  - component: {fileID: 738079405}
+  m_Layer: 0
+  m_Name: Boomerang_Moteur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &738079405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738079404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3896c25a116a4e72815c990320d9972, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoomerangController
+  playerHand: {fileID: 176104131}
+  playerCamera: {fileID: 330585546}
+  modelVisuel: {fileID: 1607418945}
+  axeDeRotation: {x: 0, y: 1, z: 0}
+  rotationSpeed: 800
+  speed: 15
+  distance: 20
+  sideArc: 5
+--- !u!4 &738079406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 738079404}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.335, y: 0.311, z: 0.721}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1607418945}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +527,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1215348238}
+    m_TransformParent: {fileID: 1607418945}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -490,31 +543,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.093
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.424
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.64085644
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.64085644
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.29883623
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.29883623
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -522,11 +575,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: acc1cd911fed24514b27a0cd7159c9a0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -766,57 +819,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170144999}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1215348236
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1215348238}
-  - component: {fileID: 1215348237}
-  m_Layer: 0
-  m_Name: Boomrang
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1215348237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215348236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3896c25a116a4e72815c990320d9972, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoomerangController
-  playerHand: {fileID: 176104131}
-  playerCamera: {fileID: 330585546}
-  speed: 15
-  rotationSpeed: 800
-  distance: 20
-  sideArc: 5
---- !u!4 &1215348238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215348236}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.089, y: 0.683, z: 0.538}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 117977653}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604148488
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +830,6 @@ GameObject:
   - component: {fileID: 1604148491}
   - component: {fileID: 1604148490}
   - component: {fileID: 1604148489}
-  - component: {fileID: 1604148492}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -901,18 +902,38 @@ Transform:
   - {fileID: 330585546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1604148492
-MonoBehaviour:
+--- !u!1 &1607418944
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604148488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2d84e0d8e224a958588da4d6821c13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoomerangThrower
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1607418945}
+  m_Layer: 0
+  m_Name: Rotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607418945
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607418944}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 117977653}
+  m_Father: {fileID: 738079406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1676041494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,4 +1054,4 @@ SceneRoots:
   - {fileID: 1604148491}
   - {fileID: 1676041498}
   - {fileID: 1163367005}
-  - {fileID: 1215348238}
+  - {fileID: 738079406}
