@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Rusty Moon.slnx"
+    "dotnet.defaultSolution": "Rusty-Moon.slnx"
 }
