@@ -1,26 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using System.Collections.Generic;
 using TMPro;
 
 public class MouseItemData : MonoBehaviour
 {
-    public Image itemSprite;
+    public Image ItemSprite;
     public TextMeshProUGUI ItemCount;
     public InventorySlot AssignedInventorySlot;
 
     private void Awake()
     {
-        itemSprite.color = Color.clear;
+        ItemSprite.color = Color.clear;
         ItemCount.text = "";
     }
 
     public void UpdateMouseSlot(InventorySlot invSlot)
     {
         AssignedInventorySlot.AssignItem(invSlot);
-        itemSprite.sprite = invSlot.ItemData.Icon;
+        ItemSprite.sprite = invSlot.ItemData.Icon;
         ItemCount.text = invSlot.StackSize.ToString();
-        itemSprite.color = Color.white;
+        ItemSprite.color = Color.white;
     }
 
     private void Update()
@@ -29,6 +31,28 @@ public class MouseItemData : MonoBehaviour
         {
             transform.position =  Mouse.current.position.ReadValue();
             
+            if(Mouse.current.leftButton.wasPressedThisFrame && !IsPointerOverUIObject())
+            {
+                ClearSlot();
+            }
+            
         }
+    }
+
+    public void ClearSlot()
+    {
+        AssignedInventorySlot.ClearSlot();
+        ItemCount.text = "";
+        ItemSprite.color = Color.clear;
+        ItemSprite.sprite = null;
+    }
+
+    public static bool IsPointerOverUIObject()
+    {
+        var eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = Mouse.current.position.ReadValue();
+        var results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
     }
 }
